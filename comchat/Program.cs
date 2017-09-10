@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace comchat
+namespace SerialPort
 {
     static class Program
     {
@@ -16,7 +15,9 @@ namespace comchat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new comchat.chat());
             Application.Run(new Form1());
         }
     }
 }
+ 

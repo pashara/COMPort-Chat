@@ -1,1 +1,10 @@
 c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\bin\Debug\comchat.exe.config
+c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\bin\Debug\comchat.exe
+c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\bin\Debug\comchat.pdb
+c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\comchat.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\comchat.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\comchat.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\comchat.exe
+c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\comchat.pdb
+c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\SerialPort.Form1.resources
+c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\comchat.chat.resources
