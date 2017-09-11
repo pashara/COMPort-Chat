@@ -6,5 +6,4 @@ c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\c
 c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\comchat.csproj.GenerateResource.Cache
 c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\comchat.exe
 c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\comchat.pdb
-c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\SerialPort.Form1.resources
-c:\users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\comchat.chat.resources
+C:\Users\admin\documents\visual studio 2015\Projects\comchat\comchat\obj\Debug\SPort.Form1.resources

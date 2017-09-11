@@ -16,7 +16,7 @@ namespace SerialPort
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new comchat.chat());
-            Application.Run(new Form1());
+            Application.Run(new SPort.Form1());
         }
     }
 }

@@ -1,7 +1,8 @@
-﻿namespace SerialPort
+﻿namespace SPort
 {
     partial class Form1
     {
+        private static string programName = "Pashara`s chart";
         /// <summary>
         /// Требуется переменная конструктора.
         /// </summary>
@@ -28,25 +29,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.chatTextBox = new System.Windows.Forms.TextBox();
+            this.chatTextBox = new System.Windows.Forms.RichTextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.messageTextBox = new System.Windows.Forms.TextBox();
             this.sendButton = new System.Windows.Forms.Button();
+            this.speedList = new System.Windows.Forms.ComboBox();
+            serialPort1 = new System.IO.Ports.SerialPort();
+
             this.SuspendLayout();
-            // 
-            // serialPort1
-            // 
-            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(184, 12);
+            this.button1.Location = new System.Drawing.Point(184, 10);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 22);
             this.button1.TabIndex = 0;
             this.button1.Text = "Открыть";
             this.button1.UseVisualStyleBackColor = true;
@@ -54,9 +52,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(395, 12);
+            this.button2.Location = new System.Drawing.Point(395, 10);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 22);
             this.button2.TabIndex = 1;
             this.button2.Text = "Закрыть";
             this.button2.UseVisualStyleBackColor = true;
@@ -65,11 +63,10 @@
             // chatTextBox
             // 
             this.chatTextBox.Location = new System.Drawing.Point(21, 53);
-            this.chatTextBox.Multiline = true;
             this.chatTextBox.Name = "chatTextBox";
-            this.chatTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.chatTextBox.Size = new System.Drawing.Size(449, 141);
             this.chatTextBox.TabIndex = 2;
+            this.chatTextBox.Text = "";
             // 
             // usernameTextBox
             // 
@@ -89,16 +86,41 @@
             // 
             this.sendButton.Location = new System.Drawing.Point(397, 200);
             this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(75, 23);
+            this.sendButton.Size = new System.Drawing.Size(75, 20);
             this.sendButton.TabIndex = 5;
             this.sendButton.Text = "Send";
             this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
+            // 
+            // speedList
+            // 
+            this.speedList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.speedList.FormattingEnabled = true;
+            this.speedList.Items.AddRange(new object[] {
+            "110",
+            "150",
+            "300",
+            "600",
+            "1200",
+            "2400",
+            "4800",
+            "9600",
+            "19200",
+            "38400",
+            "57600",
+            "115200"});
+            this.speedList.Location = new System.Drawing.Point(266, 10);
+            this.speedList.Name = "speedList";
+            this.speedList.Size = new System.Drawing.Size(121, 21);
+            this.speedList.TabIndex = 6;
+            this.speedList.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 239);
+            this.Controls.Add(this.speedList);
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.messageTextBox);
             this.Controls.Add(this.usernameTextBox);
@@ -106,8 +128,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Pashara`s chart";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = programName;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,10 +139,11 @@
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox chatTextBox;
+        private System.Windows.Forms.RichTextBox chatTextBox;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox messageTextBox;
         private System.Windows.Forms.Button sendButton;
+        private System.Windows.Forms.ComboBox speedList;
     }
 }
 
